@@ -1,7 +1,11 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uofa-eng-assignment}[2022/10/31 University of Alberta engineering assignments]
+\ProvidesClass{zc-ust-hw}[2022/11/01 LaTeX class for Zewail City Universt of Science and Technology assignments]
 
 \LoadClass[11pt, letterpaper]{article}
+
+%%%%%%%%%%%%%%
+%  Geometry  %
+%%%%%%%%%%%%%%
 
 \setlength{\textwidth}{6.5in}
 \setlength{\textheight}{9.in}
@@ -10,11 +14,19 @@
 
 \RequirePackage[margin=2cm]{geometry}
 
+%%%%%%%%%%%%
+%  Colors  %
+%%%%%%%%%%%%
+
 \RequirePackage{color}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%%%%%%%%%%%
+%  Lists  %
+%%%%%%%%%%%
 
 \RequirePackage{listings}
 \lstdefinestyle{mystyle}{
@@ -37,34 +49,47 @@
 }
 \lstset{style=mystyle}
 
-\RequirePackage{graphicx}
-\RequirePackage{fancybox}
-\RequirePackage[utf8]{inputenc}
-\RequirePackage{epsfig,graphicx}
-\RequirePackage{multicol,pst-plot}
-\RequirePackage{pstricks}
-\RequirePackage{amsmath}
-\RequirePackage{amsfonts}
-\RequirePackage{amssymb}
-\RequirePackage{eucal}
+%%%%%%%%%%%%%%
+%  Packages  %
+%%%%%%%%%%%%%%
 
-\DeclareMathOperator{\tr}{Tr}
-\newcommand*{\op}[1]{\check{\mathbf#1}}
-\newcommand{\bra}[1]{\langle #1 |}
-\newcommand{\ket}[1]{| #1 \rangle}
-\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
-\newcommand{\mean}[1]{\langle #1 \rangle}
-\newcommand{\opvec}[1]{\check{\vec #1}}
-\renewcommand{\sp}[1]{$${\begin{split}#1\end{split}}$$}
+\RequirePackage{hyperref} % Links.
+\RequirePackage{amsmath,amsfonts,mathtools,amsthm,amssymb,bm} % Math.
+\RequirePackage{graphicx} % Images and graphics.
+\RequirePackage{pdfpages} % PDF.
+
+%%%%%%%%%%%%%%
+%  PGFplots  %
+%%%%%%%%%%%%%%
+
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.13}
+
+%%%%%%%%%%
+%  TikZ  %
+%%%%%%%%%%
+
+\RequirePackage[framemethod=TikZ]{mdframed}
+\RequirePackage{tikz}
+\RequirePackage{tikz-cd}
+\RequirePackage{tikzsymbols}
+
+\usetikzlibrary{intersections, angles, quotes, calc, positioning}
+\usetikzlibrary{arrows.meta}
+
+%%%%%%%%%%%
+%  Title  %
+%%%%%%%%%%%
 
 \renewcommand\maketitle{
     \begin{flushleft}
         Student Name: \name \\
-        Student ID: \id
+        Student ID: \id \\
+        Date: \today
     \end{flushleft}
 
     \begin{flushright}\vspace{-15mm}
-        \includegraphics[height=2cm]{logo.png}
+        \includegraphics[height=2cm]{logo.jpg}
     \end{flushright}
 
     \begin{center}\vspace{-1cm}
