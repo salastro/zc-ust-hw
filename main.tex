@@ -17,10 +17,14 @@
   \item Question Number 1
     %%%%%%%%%%%%%%%%%%%%
 
-    \begin{align}
-      f(x) &= x^4 - 2x + 1 \\
-      F(x) &= \int_{0}^{x} f(t) \, dt 
-    .\end{align}
+    \[
+      f(x) = x^4 - 2x + 1
+    .\] 
+    \begin{sol}
+      \begin{align}
+        F(x) = \int_{0}^{x} f(t) \, dt
+      .\end{align}
+    \end{sol}
 
     %%%%%%%%%%%%%%%%%%%%
   \item Question Number 2
@@ -28,7 +32,7 @@
 
     \begin{figure}[H]
       \centering
-      \begin{minipage}{0.75\textwidth}
+      \begin{minipage}{0.7\textwidth}
 \begin{lstlisting}[language=Python]
 import numpy as np
 import matplotlib.pyplot as plt
@@ -50,7 +54,7 @@ plt.show()
       \end{lstlisting}
     \end{minipage}
     \hfill
-    \begin{subfigure}{0.2\textwidth}
+    \begin{subfigure}{0.25\textwidth}
       \begin{tikzpicture}[scale=0.5]
         \begin{axis}[
           xmin=-5, xmax=5,
@@ -80,7 +84,7 @@ plt.show()
 
   \begin{figure}[H]
     \begin{center}
-      \begin{circuitikz}
+      \begin{circuitikz}[scale=0.95]
         \draw (0,0) to [short, *-] (6,0)
           to [V, l=$V_s$] (6,3)
           to [R, l=$R_1$] (3,3)

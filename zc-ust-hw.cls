@@ -29,7 +29,6 @@
 %  Code  %
 %%%%%%%%%%
 
-
 \RequirePackage{listings}
 \lstdefinestyle{mystyle}{
   backgroundcolor=\color{backcolour},
@@ -96,6 +95,17 @@
 \usetikzlibrary{arrows.meta}
 
 \RequirePackage[american]{circuitikz}
+
+%%%%%%%%%%%%%%%%%%
+%  Environments  %
+%%%%%%%%%%%%%%%%%%
+
+% Solution environment
+\newenvironment{sol}
+{
+  \renewcommand\qedsymbol{$\blacksquare$}
+  \begin{proof}[Solution]} {\end{proof}
+}
 
 %%%%%%%%%%%
 %  Title  %
