@@ -107,6 +107,28 @@
   \begin{proof}[Solution]} {\end{proof}
 }
 
+%%%%%%%%%%%%%%
+%  InkScape  %
+%%%%%%%%%%%%%%
+
+\RequirePackage{import}
+\RequirePackage{xifthen}
+
+\newcommand{\incfig}[1]{%
+  \def\svgwidth{\columnwidth}
+  \import{./figures/}{#1.pdf_tex}
+}
+
+%%%%%%%%%%
+%  Sets  %
+%%%%%%%%%%
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathcal{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
 %%%%%%%%%%%
 %  Title  %
 %%%%%%%%%%%
